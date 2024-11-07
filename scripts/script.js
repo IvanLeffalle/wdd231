@@ -100,7 +100,6 @@ document.querySelectorAll(".button").forEach(button => {
 filterCourses('ALL');
 
 
-/*ReduceFunction*/
 
 
 /*Footer*/

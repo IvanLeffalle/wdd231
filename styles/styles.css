@@ -252,6 +252,19 @@ body {
     margin-top: 1rem;
     text-align: center;
     font-family: var(--font-content);
+    font-size: 14px;
+}
+
+.course-list {
+    text-align: start;
+    font-family: var(--font-content);
+    line-height: 35px;
+    font-size: 20px;
+
+}
+
+.course-title {
+    font-weight: bold;
 }
 
 .filter {

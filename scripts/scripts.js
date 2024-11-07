@@ -92,7 +92,7 @@ const filterCourses = (subject) => {
 document.querySelectorAll(".button").forEach(button => {
     button.addEventListener("click", (event) => {
         event.preventDefault();
-        const subject = event.target.getAttribute("subject");
+        const subject = event.target.getAttribute("data-subject");
         filterCourses(subject);
     });
 });

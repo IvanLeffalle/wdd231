@@ -117,3 +117,22 @@ menu.addEventListener("click", () => {
     menu.classList.toggle("active");
 });
 
+/*Active Buttons */
+const btns = document.querySelectorAll('.btn');
+
+const activePage = localStorage.getItem('activePage');
+
+btns.forEach(btn => {
+    btn.addEventListener('click', function (event) {
+        btns.forEach(button => button.classList.remove('active'));
+        this.classList.add('active');
+        localStorage.setItem('activePage', this.href);
+    });
+});
+
+if (activePage) {
+    const activeBtn = [...btns].find(btn => btn.href === activePage);
+    if (activeBtn) {
+        activeBtn.classList.add('active');
+    }
+}

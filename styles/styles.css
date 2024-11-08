@@ -406,3 +406,18 @@ body {
     }
 
 }
+
+
+
+.btn.active {
+    text-decoration: underline;
+    border-radius: 5px;
+    text-underline-offset: 5px;
+
+}
+
+.active:hover {
+    transform: scale(1.1);
+    transition-duration: 100ms;
+    color: var(--text-color-dark);
+}

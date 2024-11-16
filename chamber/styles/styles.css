@@ -50,7 +50,7 @@ header {
     color: var(--text-color-light);
 }
 
-nav {
+.nav {
     top: 0;
     left: 0;
     right: 0;
@@ -60,39 +60,9 @@ nav {
     font-size: 16px;
     justify-content: space-around;
     color: var(--text-color-light);
+
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.profile-image {
-    width: 50px;
-    height: auto;
-    border-radius: 5px;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    margin-left: 1.5rem;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--text-color-light);
-}
-
-nav a:hover {
-    color: var(--accent-color, #007bff);
-}
 
 .list {
     list-style-type: none;
@@ -144,35 +114,29 @@ nav a:hover {
     color: var(--accent-color);
     text-decoration: underline;
     text-decoration-color: var(--accent-color);
+    text-underline-offset: 5px;
+
 }
 
-
-@media only screen and (min-width: 40em) {
-    .list {
-        display: flex;
-        position: static;
-        flex-direction: row;
-        transform: none;
-        background-color: transparent;
-        padding-top: 0;
-
-    }
-
-    .list li {
-        margin: 0 1rem;
-    }
-
-    #menu {
-        display: none;
-    }
-
-    .list a {
-        color: var(--text-color-light);
-
-    }
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    color: var(--accent-color-2);
+    cursor: pointer;
+    z-index: 10;
+    position: relative;
 }
 
+#menu::before {
+    content: "≡";
+}
 
+#menu.active::before {
+    content: "X";
+}
 
 
 main {
@@ -246,8 +210,8 @@ main {
     margin-right: 1rem;
     border-radius: 100%;
     color: var(--text-color-light);
-
 }
+
 
 .home {
     grid-area: home;
@@ -311,11 +275,14 @@ footer {
 
 }
 
+
 .footer-layout {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
     grid-template-areas: "sidebar-left contact social course sidebar-rigth";
 }
+
+
 
 .contact-info {
     grid-area: contact;
@@ -476,4 +443,91 @@ tbody {
     border-radius: 5px;
     width: 100%;
     max-width: 350px;
+}
+
+.buttons.new-active {
+    text-decoration: underline;
+    border-radius: 5px;
+    text-underline-offset: 5px;
+
+}
+
+.new-active:hover {
+    transform: scale(1.1);
+    transition-duration: 100ms;
+    color: var(--text-color-dark);
+}
+
+@media only screen and (min-width: 40em) {
+    .list {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        transform: none;
+        background-color: transparent;
+        padding-top: 0;
+
+    }
+
+    .list li {
+        margin: 0 1rem;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .list a {
+        color: var(--text-color-light);
+
+    }
+
+
+}
+
+
+
+@media(max-width: 768px) {
+    .footer-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        gap: 1rem;
+        padding: 1rem;
+        text-align: center;
+        grid-template-areas: "contact" "social" "course";
+    }
+
+    .contact-info,
+    .social-media,
+    .course-info {
+        text-align: center;
+
+    }
+
+    .social-media {
+        flex-direction: column;
+    }
+
+
+    .contact-info {
+        grid-area: contact;
+    }
+
+    .course-info {
+        grid-area: course;
+    }
+
+    .social-media {
+        grid-area: social;
+        display: flex;
+
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .list-view {
+        overflow-x: auto;
+    }
+
 }

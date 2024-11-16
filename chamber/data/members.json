@@ -5,7 +5,7 @@
             "address": "Obligado St. 721, Chaco, Argentina",
             "phone": "(+54) 9 1234 5678",
             "website": "https://ivanleffalle.github.io/wdd231/index.html",
-            "image": "/images/logo.png",
+            "image": "./images/familydental.webp",
             "membership": 1,
             "specialties": "General Dentistry, Cosmetic Dentistry",
             "hours": "Mon-Fri 9am-5pm"
@@ -15,7 +15,7 @@
             "address": "1234 Main St, Los Angeles, CA, USA",
             "phone": "(+1) 310-555-1234",
             "website": "https://brightsmiles.com",
-            "image": "https://www.brightsmilemiri.com/gallery/BrightSmile-02-ts1666677885.jpg?ts=1718165499",
+            "image": "./images/BrightSmile.webp",
             "membership": 3,
             "specialties": "Pediatric Dentistry, Orthodontics",
             "hours": "Mon-Fri 8am-6pm, Sat 9am-1pm"
@@ -25,7 +25,7 @@
             "address": "456 Central Ave, New York, NY, USA",
             "phone": "(+1) 212-555-4567",
             "website": "https://downtowndentalcare.com",
-            "image": "https://www.ddclr.com/wp-content/uploads/2024/07/NEW-downtown-dental-care-logo-1.png",
+            "image": "./images/downtown.webp",
             "membership": 2,
             "specialties": "Family Dentistry, Preventive Care",
             "hours": "Mon-Fri 9am-5pm, Closed Sat-Sun"
@@ -35,7 +35,7 @@
             "address": "789 Beach Rd, Miami, FL, USA",
             "phone": "(+1) 305-555-7890",
             "website": "https://oceanviewdental.com",
-            "image": "https://oceanviewdentaloceanside.com/wp-content/uploads/2020/02/oceanview-dental-logo.png",
+            "image": "images/oceanview.webp",
             "membership": 3,
             "specialties": "Implants, Oral Surgery",
             "hours": "Mon-Fri 8am-6pm, Sat 8am-2pm"
@@ -45,7 +45,7 @@
             "address": "321 Elm St, Austin, TX, USA",
             "phone": "(+1) 512-555-3210",
             "website": "https://healthysmiles.com",
-            "image": "https://healthysmileshouston.com/wp-content/themes/understrap-child/images/logo.png",
+            "image": "images/healthy.webp",
             "membership": 1,
             "specialties": "Preventive Care, Cosmetic Dentistry",
             "hours": "Mon-Fri 8am-5pm"
@@ -55,7 +55,7 @@
             "address": "101 Luxury Dr, Beverly Hills, CA, USA",
             "phone": "(+1) 424-555-1010",
             "website": "https://elitedentalspecialists.com",
-            "image": "https://www.edscare.com/assets/images/logo.png",
+            "image": "images/edscare.webp",
             "membership": 3,
             "specialties": "Orthodontics, Cosmetic Dentistry, Veneers",
             "hours": "Mon-Fri 9am-6pm, Sat 10am-3pm"
@@ -65,7 +65,7 @@
             "address": "777 Park Ave, Chicago, IL, USA",
             "phone": "(+1) 312-555-7777",
             "website": "https://citycenterdental.com",
-            "image": "https://citycenterdentalcare.com/wp-content/uploads/2021/02/City-Center-Dental-Logo.png",
+            "image": "images/CityCenter.webp",
             "membership": 2,
             "specialties": "Emergency Dental Care, Endodontics",
             "hours": "24/7"

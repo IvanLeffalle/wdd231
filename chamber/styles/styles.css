@@ -195,7 +195,7 @@ main {
     border-radius: 5px;
     font-family: var(--font-content);
     font-weight: bold;
-    font-size: 18 px;
+    font-size: 18px;
 }
 
 .hero-text button:hover {
@@ -432,7 +432,6 @@ tbody {
 }
 
 .business {
-    grid-area: "business";
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:

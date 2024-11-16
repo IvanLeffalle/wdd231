@@ -232,6 +232,13 @@ main {
     color: var(--text-color-light);
 }
 
+.title-container {
+    text-align: center;
+    font-family: var(--font-title);
+    color: var(--text-color-light);
+    padding: 1rem;
+}
+
 .sidebar-left,
 .sidebar-right {
     padding: 1rem;

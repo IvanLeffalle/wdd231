@@ -275,10 +275,11 @@ footer {
     background-color: var(--secondary-color);
     border-radius: 5px;
     border-top: 1px solid #555;
-    padding: 20px;
+    padding: 5rem;
     font-family: var(--font-title);
     text-align: center;
     color: var(--text-color-light);
+    height: 100%;
 
 }
 
@@ -494,6 +495,11 @@ tbody {
 
 
 @media(max-width: 768px) {
+    footer {
+        height: 100%;
+
+    }
+
     .footer-layout {
         display: grid;
         grid-template-columns: 1fr;

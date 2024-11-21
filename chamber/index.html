@@ -13,21 +13,22 @@
     <meta property="og:url" content="https://ivanleffalle.github.io/wdd231/chamber/directory.html">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/scripts.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/responsiveMenu.js" defer></script>
 </head>
 
 <body>
     <div class="layout">
         <header>
-            <nav>
-                <a href="index.html" class="logo">
-                    <img src="images/logo.png" alt="Ivan Leffalle" class="profile-image">
-                    <h2>Argentina Chamber of Dentists</h2>
-                </a>
+            <nav class="nav">
+                <img src="images/logo.webp" alt="Ivan Leffalle" class="profile-image">
+                <h2>Logo</h2>
+                <a id="menu" href="#"></a>
                 <ul class="list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="directory.html">Directory</a></li>
-                    <li><a href="join.html">Join</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html" class="buttons">Home</a></li>
+                    <li><a href="directory.html" class="buttons">Directory</a></li>
+                    <li><a href="join.html" class="buttons">Join</a></li>
+                    <li><a href="contact.html" class="buttons">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -37,7 +38,7 @@
             <section class="hero">
                 <div class="hero-image">
                     <div class="hero-text">
-                        <h1 style="font-size:50px">Join the Argentina Chamber of Dentists Today!</h1>
+                        <h1 >Join the Argentina Chamber of Dentists Today!</h1>
                         <p>
                             Be part of a professional community dedicated to advancing dental health in Argentina.
                             Connect with fellow dentists, gain access to the latest industry insights, attend exclusive
@@ -60,36 +61,124 @@
                 </section>
                 <section class="card-2">
                     <h2 class="card-title">Current Weather</h2>
+                    <div class="weather-section">
+                        <p id="today"></p>
+                        <p>Resistencia, Argentina </p>
+                        <figure>
+                            <img id="weather-icon" src="" alt="">
+                            <figcaption></figcaption>
+                        </figure>
+                    </div>
+                    <div class="weather-temp">
+                        <p class="temp" id="current-temp"></p>
+                        <p class="feel" id="real-feel"></p>
+                    </div>
+                    <div class="weather-details">
+                        <div class="weather-list">
+                            <span>Temp Max: </span>
+                            <p id="tempMax"></p>
+                        </div>
+                        <div class="weather-list">
+                            <span>Temp Min: </span>
+                            <p id="tempMin"></p>
+                        </div>
+
+                        <div class="weather-list">
+                            <span>Humidity:</span>
+                            <p id="humidityCurr"></p>
+                        </div>
+                        <div class="weather-list">
+                            <span>Wind: </span>
+                            <p id="windCurr"></p>
+                        </div>
+                    </div>
+
+
                 </section>
                 <section class="card-3">
                     <h2 class="card-title">Weather Forecast</h2>
+                    <p>The forecasted temperature in Resistencia, Argentina is <span id="forecast-temp"></span></p>
+                    <div class="threeDays-forecast">
+                        <div class="forecast-days">
+                            <div id="tomorrow"></div>
+                            <img id="forecastIcon-Tomorrow" src="" alt="">
+                            <p class="desc" id="tomorrowDesc"></p>
+                            <p id="tomorrowTemp"></p>
+                        </div>
+
+                        <div class="forecast-days">
+                            <div id="dayAfterTomorrow"></div>
+                            <img id="forecastIcon-dayAfter" src="" alt="">
+                            <p class="desc" id="AfterTomorrowDesc"></p>
+                            <p id="AfterTomorrowTemp"></p>
+
+                        </div>
+
+                        <div class="forecast-days">
+                            <div id="dayAfterAfterTomorrow"></div>
+                            <img id="forecastIcon-dayAfterAfter" src="" alt="">
+                            <p class="desc" id="AfterAfterTomorrowDesc"></p>
+                            <p id="AfterAftertomorrowTemp"></p>
+                        </div>
+                    </div>
+
                 </section>
                 <div class="sidebar-left"></div>
             </section>
 
             <!-- Business Section -->
-            <section class="business" id="business">
-                <!-- Content for the business section goes here -->
+            <section class="main-cards">
+                <div class="sidebar-left"></div>
+                <div class="cards">
+                    <section class="business" id="business">
+                    </section>
+                </div>
+                <div class="sidebar-right"></div>
             </section>
         </main>
 
         <footer>
             <div class="footer-layout">
                 <section class="contact-info">
-                    <h3>Argentina Chamber of Dentists</h3>
+                    <h3>Chaco Chamber of Commerce</h3>
                     <p>123 Main St</p>
                     <p>Chaco, Argentina</p>
                     <p>(+54) 9 1234 5678</p>
                 </section>
                 <section class="social-media">
-                    <img src="images/facebook-icon.png" alt="Facebook logo">
-                    <img src="images/twitter-icon.png" alt="Twitter logo">
-                    <img src="images/linkedin-icon.png" alt="LinkedIn logo">
+                    <div>
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                width="24" height="24">
+                                <path
+                                    d="M22.675 0H1.325C.593 0 0 .593 0 1.326V22.67c0 .732.593 1.326 1.326 1.326h11.495V14.708h-3.128v-3.62h3.128V8.413c0-3.1 1.892-4.788 4.657-4.788 1.325 0 2.466.099 2.796.143v3.244h-1.919c-1.506 0-1.797.716-1.797 1.764v2.312h3.588l-.467 3.62h-3.121V24h6.116c.732 0 1.326-.593 1.326-1.326V1.326C24 .593 23.407 0 22.675 0z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                width="24" height="24">
+                                <path
+                                    d="M22.23 0H1.77C.79 0 0 .774 0 1.73v20.538C0 23.226.79 24 1.77 24H22.23C23.21 24 24 23.226 24 22.269V1.73C24 .774 23.21 0 22.23 0zM7.059 20.452H3.537V9.452h3.522v11zm-1.765-12.6c-1.15 0-2.084-.935-2.084-2.084 0-1.15.935-2.084 2.084-2.084 1.15 0 2.084.935 2.084 2.084 0 1.15-.935 2.084-2.084 2.084zm15.576 12.6h-3.522v-5.602c0-1.337-.027-3.062-1.868-3.062-1.868 0-2.155 1.46-2.155 2.966v5.698H9.804V9.452h3.382v1.506h.048c.471-.89 1.621-1.825 3.337-1.825 3.568 0 4.23 2.348 4.23 5.398v5.921z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                width="24" height="24">
+                                <path
+                                    d="M19.615 3.184c-4.857-.348-9.731-.348-14.588 0-2.568.184-4.487 2.135-4.743 4.7-.428 4.348-.428 8.737 0 13.086.256 2.565 2.176 4.516 4.743 4.7 4.857.348 9.731.348 14.588 0 2.568-.184 4.487-2.135 4.743-4.7.428-4.348.428-8.737 0-13.086-.256-2.565-2.176-4.516-4.743-4.7zM9.564 16.285v-8.571l7.429 4.286-7.429 4.285z" />
+                            </svg>
+                        </a>
+                    </div>
                 </section>
+
                 <section class="course-info">
                     <p>WDD231 Class Project</p>
                     <p>Ivan Leffalle</p>
-                    <p>Last Modification: <span class="modification"></span></p>
+                    <p>Last Modification:<span class="modification "></span> </p>
                 </section>
             </div>
         </footer>

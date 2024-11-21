@@ -18,7 +18,11 @@ const cards = document.querySelector('#cards');
 const displayMemberHome = (members) => {
     business.innerHTML = '';
 
-    const selectedMembers = members.slice(0, 3);
+    const getRandomMembers = (arr, count) => {
+        const shuffled = arr.sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, count);
+    }
+    const selectedMembers = getRandomMembers(members, 3);
     selectedMembers.forEach(member => {
         let card = document.createElement('section');
         let name = document.createElement('h2');
@@ -39,7 +43,7 @@ const displayMemberHome = (members) => {
         websiteLink.target = "_blank";
         website.appendChild(websiteLink);
 
-        image.setAttribute('src', member.imageurl);
+        image.setAttribute('src', member.image);
         image.setAttribute('alt', `Portrait of ${member.name}`);
         image.setAttribute('loading', 'lazy');
         image.setAttribute('width', '250');
@@ -176,31 +180,3 @@ document.getElementById('list-toggle').addEventListener('click', () => {
 jsonFetch(url).then(displayMember);
 
 
-
-/*Responsive Menu*/
-const menu = document.querySelector("#menu");
-const list = document.querySelector(".list");
-
-menu.addEventListener("click", () => {
-    list.classList.toggle("active");
-    menu.classList.toggle("active");
-});
-
-const buttons = document.querySelectorAll('.buttons');
-
-const activePage = localStorage.getItem('activePage');
-
-buttons.forEach(btn => {
-    btn.addEventListener('click', function (event) {
-        buttons.forEach(button => button.classList.remove('new-active'));
-        this.classList.add('new-active');
-        localStorage.setItem('activePage', this.href);
-    });
-});
-
-if (activePage) {
-    const activeBtn = [...buttons].find(btn => btn.href === activePage);
-    if (activeBtn) {
-        activeBtn.classList.add('new-active');
-    }
-}

@@ -149,9 +149,33 @@ main {
     grid-template-areas:
         "hero"
         "home"
-        "business";
+        "maincards";
 
 }
+
+.home {
+    grid-area: home;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "title title title title title"
+        "sidebar-left card-1 card-2 card-3 sidebar-right";
+
+
+}
+
+.main-cards {
+
+    grid-area: maincards;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    gap: 1rem;
+    grid-template-areas:
+        "sidebar-left business sidebar-right";
+}
+
 
 .hero {
     grid-area: hero;
@@ -182,6 +206,10 @@ main {
     border-radius: 5px;
 }
 
+.hero-text h1 {
+    font-size: 50px;
+}
+
 .hero-text button {
     border: none;
     outline: 0;
@@ -202,6 +230,10 @@ main {
     background-color: #555;
     color: white;
 }
+.hero-text p{
+    line-height: 2rem;
+
+}
 
 
 .profile-image {
@@ -213,16 +245,6 @@ main {
 }
 
 
-.home {
-    grid-area: home;
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas:
-        "title title title title title"
-        "sidebar-left card-1 card-2 card-3 sidebar-right";
-}
 
 .title {
     grid-area: title;
@@ -239,22 +261,14 @@ main {
     padding: 1rem;
 }
 
-.sidebar-left,
-.sidebar-right {
-    padding: 1rem;
-    border-radius: 5px;
-
-}
 
 .card-1,
 .card-2,
 .card-3 {
-    padding: 1rem;
+    padding: 1.5rem;
     background-color: var(--secondary-color);
     border-radius: 5px;
     color: var(--text-color-light);
-    display: flex;
-    flex-direction: column;
     justify-content: center;
 }
 
@@ -287,7 +301,7 @@ footer {
 .footer-layout {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
-    grid-template-areas: "sidebar-left contact social course sidebar-rigth";
+    grid-template-areas: "sidebar-left contact social course sidebar-right";
 }
 
 
@@ -318,7 +332,8 @@ footer {
 }
 
 /**directory page**/
-.cards {
+.cards,
+.business {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 1rem;
@@ -326,16 +341,19 @@ footer {
     text-align: center;
 }
 
-.cards h2 {
+.cards h2,
+.business h2 {
     font-family: var(--font-title);
 }
 
-.cards p {
+.cards p,
+.business p {
     font-family: var(--font-content);
 
 }
 
-.cards img {
+.cards img,
+.business img {
     width: 100%;
     height: auto;
 }
@@ -359,11 +377,7 @@ footer {
 
 }
 
-.main {
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    grid-template-areas: "sidebar-left main sidebar-right";
-}
+
 
 .filter {
     padding: 1rem;
@@ -432,24 +446,16 @@ tbody {
     color: var(--text-color-dark)
 }
 
-.business {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-        "sidebar-right business business business sidebar-left";
-    justify-items: center;
-    align-items: start;
-}
+
 
 .business section {
-    margin: 0.25rem;
     padding: 1rem;
     background-color: var(--accent-color-2);
     display: flex;
     flex-direction: column;
+    align-items: center;
     border-radius: 5px;
-    width: 100%;
-    max-width: 350px;
+    justify-content: flex-end;
 }
 
 .buttons.new-active {
@@ -463,6 +469,85 @@ tbody {
     transform: scale(1.1);
     transition-duration: 100ms;
     color: var(--text-color-dark);
+}
+
+/*weather Section*/
+.weather-section {
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    font-family: var(--font-content)
+}
+
+.weather-section p {
+    font-family: var(--font-title);
+    font-size: 24px;
+}
+
+.weather-temp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.temp {
+    font-size: 35px;
+    font-family: var(--font-title);
+    font-weight: 400;
+}
+
+.feel {
+    font-family: var(--font-content);
+    font-size: 20px;
+}
+
+.weather-details {
+    font-family: var(--font-content);
+    font-size: 20px;
+}
+
+.weather-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.weather-list span {
+    font-weight: 600;
+}
+
+.threeDays-forecast {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: var(--font-title);
+    font-size: 24px;
+}
+
+.forecast-days {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--accent-color);
+    gap: 2rem;
+}
+
+.desc {
+    font-family: var(--font-content);
+    font-size: 16px;
+}
+
+.sidebar-left {
+    padding: 1rem;
+    border-radius: 5px;
+    grid-area: sidebar-left;
+}
+
+.sidebar-right {
+    padding: 1rem;
+    border-radius: 5px;
+    grid-area: sidebar-right;
 }
 
 @media only screen and (min-width: 40em) {
@@ -489,7 +574,6 @@ tbody {
 
     }
 
-
 }
 
 
@@ -504,22 +588,11 @@ tbody {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, auto);
-        gap: 1rem;
         padding: 1rem;
         text-align: center;
         grid-template-areas: "contact" "social" "course";
     }
 
-    .contact-info,
-    .social-media,
-    .course-info {
-        text-align: center;
-
-    }
-
-    .social-media {
-        flex-direction: column;
-    }
 
 
     .contact-info {
@@ -533,6 +606,7 @@ tbody {
     .social-media {
         grid-area: social;
         display: flex;
+        flex-direction: column;
 
         justify-content: center;
         gap: 1rem;
@@ -542,4 +616,45 @@ tbody {
         overflow-x: auto;
     }
 
+
+    /*Home section*/
+    .home {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+    }
+
+    .main-cards {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "business";
+    }
+
+    .sidebar-right,
+    .sidebar-left {
+        display: none;
+    }
+
+    .hero-text {
+        min-width: 90%;
+    }
+
+
+    .hero-text h1 {
+        font-size: 30px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+
+    .contact-info,
+    .social-media,
+    .course-info {
+        text-align: center;
+        padding: 1rem;
+        border-bottom: 1px solid var(--accent-color);
+        justify-content: center;
+
+    }
 }

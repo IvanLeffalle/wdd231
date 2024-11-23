@@ -339,6 +339,10 @@ footer {
     width: auto;
 }
 
+.location img {
+    height: 25px;
+}
+
 /**directory page**/
 .cards,
 .business {

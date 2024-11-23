@@ -6,7 +6,7 @@
             "phone": "(+54) 9 1234 5678",
             "website": "https://ivanleffalle.github.io/wdd231/index.html",
             "image": "./images/familydental.webp",
-            "membership": 1,
+            "membership": "Silver ",
             "specialties": "General Dentistry, Cosmetic Dentistry",
             "hours": "Mon-Fri 9am-5pm"
         },
@@ -16,7 +16,7 @@
             "phone": "(+1) 310-555-1234",
             "website": "https://brightsmiles.com",
             "image": "./images/BrightSmile.webp",
-            "membership": 3,
+            "membership": "Gold",
             "specialties": "Pediatric Dentistry, Orthodontics",
             "hours": "Mon-Fri 8am-6pm, Sat 9am-1pm"
         },
@@ -26,7 +26,7 @@
             "phone": "(+1) 212-555-4567",
             "website": "https://downtowndentalcare.com",
             "image": "./images/downtown.webp",
-            "membership": 2,
+            "membership": "Bronze",
             "specialties": "Family Dentistry, Preventive Care",
             "hours": "Mon-Fri 9am-5pm, Closed Sat-Sun"
         },
@@ -36,7 +36,7 @@
             "phone": "(+1) 305-555-7890",
             "website": "https://oceanviewdental.com",
             "image": "images/oceanview.webp",
-            "membership": 3,
+            "membership": "Silver",
             "specialties": "Implants, Oral Surgery",
             "hours": "Mon-Fri 8am-6pm, Sat 8am-2pm"
         },
@@ -46,7 +46,7 @@
             "phone": "(+1) 512-555-3210",
             "website": "https://healthysmiles.com",
             "image": "images/healthy.webp",
-            "membership": 1,
+            "membership": "Gold",
             "specialties": "Preventive Care, Cosmetic Dentistry",
             "hours": "Mon-Fri 8am-5pm"
         },
@@ -56,7 +56,7 @@
             "phone": "(+1) 424-555-1010",
             "website": "https://elitedentalspecialists.com",
             "image": "images/edscare.webp",
-            "membership": 3,
+            "membership": "Bronze",
             "specialties": "Orthodontics, Cosmetic Dentistry, Veneers",
             "hours": "Mon-Fri 9am-6pm, Sat 10am-3pm"
         },
@@ -66,7 +66,7 @@
             "phone": "(+1) 312-555-7777",
             "website": "https://citycenterdental.com",
             "image": "images/CityCenter.webp",
-            "membership": 2,
+            "membership": "Silver",
             "specialties": "Emergency Dental Care, Endodontics",
             "hours": "24/7"
         }

@@ -230,7 +230,8 @@ main {
     background-color: #555;
     color: white;
 }
-.hero-text p{
+
+.hero-text p {
     line-height: 2rem;
 
 }
@@ -245,6 +246,13 @@ main {
 }
 
 
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--accent-color-2);
+    text-decoration: none;
+}
 
 .title {
     grid-area: title;
@@ -322,10 +330,10 @@ footer {
     gap: 1rem;
 }
 
-.icon {
+.social-media img {
     background-color: var(--accent-color);
     color: var(--text-color-dark);
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 5px;
     height: 64px;
     width: auto;
@@ -356,6 +364,7 @@ footer {
 .business img {
     width: 100%;
     height: auto;
+    border-radius: 5px;
 }
 
 .grid-view {
@@ -455,7 +464,8 @@ tbody {
     flex-direction: column;
     align-items: center;
     border-radius: 5px;
-    justify-content: flex-end;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .buttons.new-active {
@@ -533,6 +543,13 @@ tbody {
     gap: 2rem;
 }
 
+.location {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+}
+
 .desc {
     font-family: var(--font-content);
     font-size: 16px;
@@ -549,6 +566,63 @@ tbody {
     border-radius: 5px;
     grid-area: sidebar-right;
 }
+
+.slider {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    font-family: var(--font-content);
+}
+
+.slider img {
+    border-radius: 5px;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+}
+
+.slides section {
+    flex: 0 0 100%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--accent-color);
+    color: var(--text-color-dark);
+    font-weight: 800;
+    border: none;
+    padding: 20px 20px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
 
 @media only screen and (min-width: 40em) {
     .list {
@@ -656,5 +730,28 @@ tbody {
         border-bottom: 1px solid var(--accent-color);
         justify-content: center;
 
+    }
+
+    button.prev {
+        left: 0px;
+    }
+
+    button.next {
+        right: 0px;
+    }
+
+    button.prev,
+    button.next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: var(--accent-color);
+        color: var(--text-color-dark);
+        font-weight: 800;
+        border: none;
+        padding: 10px 10px;
+        cursor: pointer;
+        z-index: 1;
+        border-radius: 5px;
     }
 }

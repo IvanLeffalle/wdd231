@@ -2,6 +2,7 @@ document.querySelector('.modification').textContent = new Date(document.lastModi
 
 const url = "./data/members.json";
 
+
 async function jsonFetch(url) {
     try {
         const response = await fetch(url);
@@ -35,7 +36,7 @@ const displayMemberHome = (members) => {
         name.textContent = member.name;
         address.textContent = member.address;
         phone.textContent = member.phone;
-        membership.textContent = member.membership;
+        membership.textContent = `${member.membership} Member`;
 
         let websiteLink = document.createElement('a');
         websiteLink.href = member.website;
@@ -46,15 +47,15 @@ const displayMemberHome = (members) => {
         image.setAttribute('src', member.image);
         image.setAttribute('alt', `Portrait of ${member.name}`);
         image.setAttribute('loading', 'lazy');
-        image.setAttribute('width', '250');
-        image.setAttribute('height', '250');
+        image.setAttribute('width', '200');
+        image.setAttribute('height', 'auto');
 
-        card.appendChild(image);
         card.appendChild(name);
+        card.appendChild(membership);
+        card.appendChild(image);
         card.appendChild(address);
         card.appendChild(phone);
         card.appendChild(website);
-        card.appendChild(membership);
 
         business.appendChild(card);
     });
@@ -177,6 +178,8 @@ document.getElementById('list-toggle').addEventListener('click', () => {
     jsonFetch(url).then(displayMember);
 });
 
-jsonFetch(url).then(displayMember);
 
+
+
+jsonFetch(url).then(displayMember);
 

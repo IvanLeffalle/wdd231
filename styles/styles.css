@@ -143,6 +143,54 @@ body {
     content: "X";
 }
 
+dialog {
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 34px;
+    border: 0;
+    border-radius: 5px;
+    font-family: var(--font-content);
+    font-size: 24px;
+}
+
+dialog button {
+
+    background-color: var(--accent-color);
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--accent-color-2);
+}
+
+dialog p {
+    font-family: var(--font-content);
+    font-size: 20px;
+
+}
+
+dialog h2 {
+    font-family: var(--font-title);
+    font-size: 24px;
+}
+
+dialog ul {
+    font-family: var(--font-content);
+    font-size: 20px;
+    list-style: none;
+    line-height: 1.5;
+}
+
+.li-element {
+    font-weight: 600;
+}
+
+::backdrop {
+    background: rgb(0, 0, 0, 0.7);
+}
+
 @media only screen and (min-width: 40em) {
     .list {
         display: flex;

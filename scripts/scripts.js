@@ -80,7 +80,7 @@ const courses = [
 
 const isCompleted = (course) => {
     const completedClass = course.completed ? 'completed' : 'not-completed';
-    return `<li class="course ${completedClass}"><a>${course.subject} ${course.number}</a></li>`;
+    return `<li class="course ${completedClass}" id="show-modal"><a>${course.subject} ${course.number}</a></li>`;
 }
 const filterCourses = (subject) => {
     const filteredCourses = subject === 'ALL' ? courses : courses.filter((course) => course.subject === subject);
@@ -136,3 +136,59 @@ if (activePage) {
         activeBtn.classList.add('active');
     }
 }
+
+
+
+/*Modal*/
+
+const dialog = document.querySelector('dialog');
+const showButton = document.querySelector('#show-modal');
+const closeButton = document.querySelector("dialog button");
+
+//show the dialog
+showButton.addEventListener('click', () => {
+    dialog.showModal();
+})
+
+
+//modal courses
+// Mostrar los detalles de un curso en el modal
+function displayModalCourses(course) {
+    const dialog = document.querySelector('dialog');
+    const courseDetails = document.querySelector("#course-details");
+
+    // Llena los detalles del curso
+    courseDetails.innerHTML = `
+        <button id="close-modal">X</button>
+        <h2 >${course.subject} ${course.number}</h2>
+        <p>${course.description}</p>
+        <ul>
+            <li><span class="li-element">Subject:</span> ${course.subject}</li>
+            <li><span class="li-element">Number:</span> ${course.number}</li>
+            <li><span class="li-element">Title:</span> ${course.title}</li>
+            <li><span class="li-element">Credits:</span> ${course.credits}</li>
+            <li><span class="li-element">Certificate:</span> ${course.certificate}</li>
+            <li><span class="li-element">Description:</span> ${course.description}</li>
+            <li><span class="li-element">Technology:</span> ${course.technology.join(', ')}</li>
+            <li><span class="li-element">Completed:</span> ${course.completed ? 'Yes' : 'No'}</li>
+        </ul>`;
+
+    dialog.showModal();
+
+    // Cerrar el modal
+    const closeButton = document.querySelector("#close-modal");
+    closeButton.addEventListener("click", () => {
+        dialog.close();
+    });
+}
+
+document.querySelector("#courses").addEventListener("click", (event) => {
+    const target = event.target.closest("li");
+    if (target && target.classList.contains("course")) {
+        const courseNumber = parseInt(target.textContent.split(" ")[1], 10);
+        const selectedCourse = courses.find(course => course.number === courseNumber);
+        if (selectedCourse) {
+            displayModalCourses(selectedCourse);
+        }
+    }
+});

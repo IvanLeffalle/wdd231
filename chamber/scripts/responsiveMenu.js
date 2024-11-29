@@ -3,27 +3,46 @@
 const menu = document.querySelector("#menu");
 const list = document.querySelector(".list");
 
+//select menu buttons
+const home = document.querySelector('a[href="index.html"]');
+const directory = document.querySelector('a[href="directory.html"]');
+const join = document.querySelector('a[href="join.html"]');
+const contact = document.querySelector('a[href="contact.html"]');
+
+
 menu.addEventListener("click", () => {
     list.classList.toggle("active");
     menu.classList.toggle("active");
 });
 
-const buttons = document.querySelectorAll('.buttons');
-const activePage = localStorage.getItem('activePage');
+//
+//active class
 
-buttons.forEach(btn => {
-    btn.addEventListener('click', function (event) {
-        buttons.forEach(button => button.classList.remove('new-active'));
-        this.classList.add('new-active');
-        localStorage.setItem('activePage', this.href);
-    });
-});
+document.addEventListener('DOMContentLoaded', function () {
+    pageTitle = document.querySelector('title').innerText;
+    changeActive(pageTitle);
+}, false)
 
-if (activePage) {
-    const activeBtn = [...buttons].find(btn => btn.href === activePage);
-    if (activeBtn) {
-        activeBtn.classList.add('new-active');
+
+function changeActive(activeMode) {
+    home.classList.remove('new-active');
+    directory.classList.remove('new-active');
+    join.classList.remove('new-active');
+    contact.classList.remove('new-active');
+    switch (activeMode) {
+        case 'Chamber of Dentists Home Page':
+            home.classList.add('new-active');
+            break;
+        case 'Chamber of Dentists Directory Page':
+            directory.classList.add('new-active');
+            break;
+        case 'join':
+            join.classList.add('new-active');
+            break;
+        case 'contact':
+            contact.classList.add('new-active');
+            break;
     }
-}
 
+}
 

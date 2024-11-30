@@ -1123,6 +1123,10 @@ button.next {
     transition: background-color 0.3s ease;
 }
 
+textarea {
+    resize: none;
+}
+
 legend {
     font-family: var(--font-title);
     font-size: 24px;

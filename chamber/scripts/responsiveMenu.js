@@ -36,7 +36,7 @@ function changeActive(activeMode) {
         case 'Chamber of Dentists Directory Page':
             directory.classList.add('new-active');
             break;
-        case 'join':
+        case 'Chamber of Dentists Join Page':
             join.classList.add('new-active');
             break;
         case 'contact':

@@ -179,7 +179,24 @@ document.getElementById('list-toggle').addEventListener('click', () => {
 });
 
 
+const inputs = document.querySelectorAll("input, select, textarea");
+
+inputs.forEach(input => {
+    input.addEventListener("invalid", () => {
+        input.style.borderColor = "red";
+    });
+
+    input.addEventListener("input", () => {
+        input.style.borderColor = "";
+    });
+});
+
+
+
+
 
 
 jsonFetch(url).then(displayMember);
+
+
 

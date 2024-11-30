@@ -139,19 +139,6 @@ if (activePage) {
 
 
 
-/*Modal*/
-
-const dialog = document.querySelector('dialog');
-const showButton = document.querySelector('#show-modal');
-const closeButton = document.querySelector("dialog button");
-
-//show the dialog
-showButton.addEventListener('click', () => {
-    dialog.showModal();
-})
-
-
-//modal courses
 // Mostrar los detalles de un curso en el modal
 function displayModalCourses(course) {
     const dialog = document.querySelector('dialog');

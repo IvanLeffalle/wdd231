@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Dentists Join Page</title>
+    <meta property="og:title" content="Chamber Page - WDD 231 - 2024 - Ivan Leffalle">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/IvanLeffalle/wdd231/6fd7a44786aab3844d76a0fcc1f4f79a96b8d64d/chamber/images/og-image.webp">
+    <meta property="og:url" content="https://ivanleffalle.github.io/wdd231/chamber/directory.html">
+    <meta name="author" content="Ivan Leffalle">
+    <meta name="description" content="This is an example of a Chamber of Dentists for the WDD 231 course.">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/scripts.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/responsiveMenu.js" defer></script>
+    <script src="scripts/slider.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+    <div class="layout">
+        <header>
+            <nav class="nav">
+                <a class="logo" href="">
+                    <img src="images/logo.webp" alt="Ivan Leffalle" class="profile-image">
+                    <h2>Chamber of Dentists</h2>
+                </a>
+                <a id="menu" href="#"></a>
+                <ul class="list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="">
+                <h2 class="title">Join Us</h2>
+            </div>
+            <section class="card-join">
+                <section>
+                    <h2 class="title">Membership Application</h2>
+                    <section class="form-join">
+                        <form method="get" action="thankyou.html">
+                            <fieldset>
+                                <legend>Personal Information</legend>
+                                <label for="first-name">First Name: <span style="color: red;">*</span></label>
+                                <input type="text" name="first-name" id="first-name" required>
+                                <label for="last-name">Last Name:<span style="color: red;">*</span></label>
+                                <input type="text" name="last-name" id="last-name" required>
+                                <label for="email">Email:<span style="color: red;">*</span></label>
+                                <input type="email" name="email" id="email" required>
+                                <label for="phone">Phone:<span style="color: red;">*</span></label>
+                                <input type="tel" name="phone" id="phone" required>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Business Information</legend>
+                                <label for="business-name">Business Name:<span style="color: red;">*</span></label>
+                                <input type="text" name="business-name" id="business-name" required>
+                                <label for="address">Address:<span style="color: red;">*</span></label>
+                                <input type="text" name="address" id="address" required>
+                                <label for="membership">Membership:<span style="color: red;">*</span></label>
+                                <select name="membership" id="membership" required>
+                                    <option value="bronze">Bronze</option>
+                                    <option value="silver">Silver</option>
+                                    <option value="gold">Gold</option>
+                                </select>
+                                <label for="description">Description (Optional):</label>
+                                <textarea name="description" id="description" cols="30" rows="5" style="resize: none;"
+                                    placeholder="Tell us more about your business..."></textarea>
+                            </fieldset>
+                            <div class="timestamp" id="timestamp"></div>
+                            <button type="submit">Join</button>
+                        </form>
+                    </section>
+                </section>
+                <section>
+                    <h2 class="title">Membership Levels</h2>
+                    <section class="membership-cards">
+                        <div class="membership-card">
+                            <h3>NP</h3>
+                            <img src="images/bronze.webp" alt="">
+                            <button id="free-btn">Learn More</button>
+
+
+                        </div>
+                        <div class="membership-card ">
+                            <h3>Bronze</h3>
+                            <img src="images/bronze.webp" alt="">
+                            <button id="bronze-btn">Learn More</button>
+                        </div>
+                        <div class="membership-card ">
+                            <h3>Silver</h3>
+                            <img src="images/silver.webp" alt="">
+
+                            <button id="silver-btn">Learn More</button>
+
+                        </div>
+                        <div class="membership-card ">
+                            <h3>Gold</h3>
+                            <img src="images/gold.webp" alt="">
+                            <button id="gold-btn">Learn More</button>
+
+
+
+                        </div>
+                        <dialog id="membership-modal">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </dialog>
+                    </section>
+
+                </section>
+                <div class="sidebar-left"></div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-layout">
+                <section class="contact-info">
+                    <h3>Chaco Chamber of Commerce</h3>
+                    <p>123 Main St</p>
+                    <p>Chaco, Argentina</p>
+                    <p>(+54) 9 1234 5678</p>
+                </section>
+                <section class="social-media">
+                    <div>
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                            <img src="images/facebook.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                            <img src="images/linkedin.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+                            <img src="images/google-mas.png" alt="">
+                        </a>
+                    </div>
+                </section>
+
+                <section class="course-info">
+                    <p>WDD231 Class Project</p>
+                    <p>Ivan Leffalle</p>
+                    <p>Last Modification:<span class="modification "></span> </p>
+                </section>
+            </div>
+        </footer>
+    </div>
+
+
+</body>
+
+</html>

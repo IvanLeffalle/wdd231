@@ -730,6 +730,19 @@ button.next {
     box-shadow: 0 0 5px var(--accent-color);
 }
 
+.form-btn {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--accent-color);
+    color: var(--text-color-dark);
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
 legend {
     font-family: var(--font-title);
     font-size: 24px;
@@ -753,7 +766,8 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: var(--secondary-color);
+    color: var(--text-color-light)
 }
 
 .card-join {

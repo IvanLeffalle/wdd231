@@ -1,4 +1,5 @@
 // Modal Logic
+
 const membershipDialog = document.querySelector("#membership-modal");
 const silverBtn = document.querySelector("#silver-btn");
 const goldBtn = document.querySelector("#gold-btn");
@@ -69,28 +70,40 @@ function openMembershipModal(membership) {
             break;
     }
 
-    // Append content to the modal
+    // append content to the modal
     membershipDialog.appendChild(membershipTitle);
     membershipDialog.appendChild(membershipDescription);
     membershipDialog.appendChild(membershipBenefits);
 
-    // Show modal
     membershipDialog.showModal();
 }
 
+
+//application form
+document.addEventListener("DOMContentLoaded", () => {
+    const timestampInput = document.getElementById("timestamp");
+    const currentDate = new Date();
+    timestampInput.value = currentDate.toISOString();
+
+});
+
 const currentUrl = window.location.href;
 const everything = currentUrl.split('?');
-let formData = everything[1]?.split('&') || []; 
+console.log(everything);
+let formData = everything[1]?.split('&') || [];
+console.log(formData);
+
 
 function show(cup) {
     let result = '';
     formData.forEach(element => {
         if (element.startsWith(cup)) {
-            result = element.split('=')[1].replace("%40", "@ ");
+            result = element.split('=')[1].replace("%40", "@").split('%');
         }
     });
     return result;
 }
+
 
 const showInfo = document.querySelector('#results');
 if (showInfo) {
@@ -101,6 +114,7 @@ if (showInfo) {
         <p><span>Email</span>: ${show('email')}</p>
         <p><span>Phone Number:</span> ${show('phone')}</p>
         <p><span>Membership:</span> ${show('membership')}</p>
+        <p><span>Date:</span> ${show('timestamp')}</p>
     `;
 }
 

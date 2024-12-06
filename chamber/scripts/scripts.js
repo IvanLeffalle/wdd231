@@ -193,9 +193,6 @@ inputs.forEach(input => {
 
 
 
-
-
-
 jsonFetch(url).then(displayMember);
 
 

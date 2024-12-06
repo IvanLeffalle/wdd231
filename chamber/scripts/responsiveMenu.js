@@ -7,7 +7,7 @@ const list = document.querySelector(".list");
 const home = document.querySelector('a[href="index.html"]');
 const directory = document.querySelector('a[href="directory.html"]');
 const join = document.querySelector('a[href="join.html"]');
-const contact = document.querySelector('a[href="contact.html"]');
+const discover = document.querySelector('a[href="discover.html"]');
 
 
 menu.addEventListener("click", () => {
@@ -28,7 +28,7 @@ function changeActive(activeMode) {
     home.classList.remove('new-active');
     directory.classList.remove('new-active');
     join.classList.remove('new-active');
-    contact.classList.remove('new-active');
+    discover.classList.remove('new-active');
     switch (activeMode) {
         case 'Chamber of Dentists Home Page':
             home.classList.add('new-active');
@@ -39,8 +39,8 @@ function changeActive(activeMode) {
         case 'Chamber of Dentists Join Page':
             join.classList.add('new-active');
             break;
-        case 'contact':
-            contact.classList.add('new-active');
+        case 'Chamber of Dentists Discover Page':
+            discover.classList.add('new-active');
             break;
     }
 

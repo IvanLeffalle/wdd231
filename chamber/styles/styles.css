@@ -872,9 +872,6 @@ dialog {
     font-size: 24px;
 }
 
-::backdrop {
-    background-color: rgba(0, 0, 0, 0.8);
-}
 
 .results {
     background-color: var(--secondary-color);
@@ -950,9 +947,11 @@ dialog {
     min-height: 100vh;
     align-items: center;
     justify-content: center;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    padding: 1rem;
+    gap: 1rem;
+
 }
 
 .main-content img {
@@ -961,6 +960,18 @@ dialog {
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 2rem;
+}
+
+.main-content img:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+}
+
+.main-content figcaption {
+    text-align: center;
+    font-family: var(--font-title);
+    font-weight: bold;
+    color: var(--text-color-light);
 }
 
 .sidebar-left {
@@ -1025,6 +1036,31 @@ dialog {
     font-size: 18px;
     margin-bottom: 1rem;
     margin-top: 1rem;
+}
+
+.content-4 {
+    text-align: center;
+    align-items: center;
+}
+
+.content-4 img {
+    padding: 1rem;
+}
+
+.content-4 figcaption {
+    text-align: center;
+    font-family: var(--font-title);
+    font-weight: bold;
+    color: var(--text-color-light);
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+span {
+    font-weight: bold;
 }
 
 @keyframes fadeInUp {
@@ -1202,4 +1238,14 @@ dialog {
         z-index: 1;
         border-radius: 5px;
     }
+
+    .discover {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .discover img:hover {
+        transform: scale(1.0);
+    }
+
 }

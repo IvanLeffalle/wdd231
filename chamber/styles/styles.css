@@ -1248,4 +1248,9 @@ span {
         transform: scale(1.0);
     }
 
+    .modal-content {
+        font-size: 12px;
+        text-align: center;
+    }
+
 }

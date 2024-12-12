@@ -2,7 +2,6 @@ const apiKey = "28a51075e2d24bc2fa20650e03f26056";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 const forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?units=metric&q=";
 const currentYear = new Date().getFullYear();
-
 const year = document.getElementById('year');
 
 const locationName = document.getElementById('location');

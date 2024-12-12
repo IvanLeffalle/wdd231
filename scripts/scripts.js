@@ -139,12 +139,11 @@ if (activePage) {
 
 
 
-// Mostrar los detalles de un curso en el modal
 function displayModalCourses(course) {
     const dialog = document.querySelector('dialog');
     const courseDetails = document.querySelector("#course-details");
 
-    // Llena los detalles del curso
+   
     courseDetails.innerHTML = `
         <button id="close-modal">X</button>
         <h2 >${course.subject} ${course.number}</h2>

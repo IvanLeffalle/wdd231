@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App About Page</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Social Media META Tags -->
+    <meta property="og:title" content="Weather App - Ivan Leffalle">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://img.freepik.com/premium-photo/3d-cloudy-sun-rain-icon-know-weather-application-web_494516-2102.jpg">
+    <meta property="og:image:width" content="828" />
+    <meta property="og:image:height" content="450" />
+    <meta property="og:url" content="https://ivanleffalle.github.io/wdd231/weather/index.html">
+    <meta property="og:site_name" content="Weather App" />
+    <meta property="og:description" content="This is an example of a Weather App for the WDD 231 course.">
+
+    <meta name="author" content="Ivan Leffalle">
+    <meta name="description" content="This is an example of a Weather App for the WDD 231 course.">
+    <!-- SCRIPTS -->
+    <script src="scripts/scripts.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/extremes.js" defer></script>
+    <script src="scripts/news.js" defer></script>
+
+
+</head>
+
+<body>
+    <div class="grid">
+        <header>
+            <nav>
+                <section class="logo">
+                    <img src="images/logo.png" alt="Ivan Leffalle" class="profile-image">
+                    <a id="menu" href="#"></a>
+                    <ul class="list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </section>
+            </nav>
+
+        </header>
+        <main>
+            <section class="hero">
+                <div class="hero-image">
+                    <div class="hero-text">
+                        <h1>Weather App</h1>
+                        <p>This is an example of a Weather App for the WDD 231 course.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-container">
+                <section class="about">
+                    <div class="about-header">
+                        <h2>About</h2>
+                    </div>
+                    <div class="about-info">
+                        <p>Welcome to the Weather App! This application was developed as part of the WDD 231 course to
+                            provide real-time weather updates based on your location. It features a clean and intuitive
+                            design that allows you to easily check the current weather, forecast data, and more.
+
+                            The app pulls weather data from a reliable API, delivering accurate temperature, humidity,
+                            wind speed, and other essential weather information. Whether you're planning your day or
+                            need to know if you should bring an umbrella, this app will keep you informed. </p>
+                    </div>
+                </section>
+                <section class="about-image">
+                    <img src="images/about-weather_55.webp" alt="Weather icon" loading="lazy">
+                </section>
+            </section>
+            <section class="news">
+                <div class="news-header">
+                    <h3>Latest News</h3>
+                </div>
+                <div class="news-containers" id="news-container">
+                </div>
+            </section>
+            <section class="extreme-weather">
+                <div class="extreme-weather-header">
+                    <h3>Extreme Weather Cities</h3>
+                </div>
+                <div class="extreme-weather-info" id="extreme-weather-info">
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="social-media">
+                <img class="logo-footer" src=" images/footer-logo.png" alt="Weather app">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook"> <img src="images/facebook.png"
+                        alt="Facebook"></a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"> <img src="images/linkedin.png"
+                        alt="Linkedin">
+                </a>
+                <a href="https://youtube.com" target="_blank" aria-label="YouTube"> <img src="images/google-mas.png"
+                        <img src="images/google-mas.png" alt="google">
+                </a>
+            </div>
+            <div class="contact-info">
+                <p>@<span id="year"></span> Ivan Leffalle</p>
+                <a>
+                    <P>Attributions</P>
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

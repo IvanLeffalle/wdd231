@@ -1,0 +1,101 @@
+{
+    "extreme_weather_cities": [
+        {
+            "name": "Dallol, Ethiopia",
+            "country": "Ethiopia",
+            "latitude": 14.2448,
+            "longitude": 40.5734,
+            "climate_characteristics": {
+                "average_annual_temperature": 35.0,
+                "max_temperature": 46.7,
+                "annual_rainfall": 0.2,
+                "humidity": 10,
+                "notable_title": "Hottest Inhabited Place on Earth"
+            },
+            "temperature_data": {
+                "hottest_month": "June",
+                "coldest_month": "January",
+                "daily_temperature_range": 25
+            }
+        },
+        {
+            "name": "Mawsynram, India",
+            "country": "India", 
+            "latitude": 25.2916,
+            "longitude": 91.7380,
+            "climate_characteristics": {
+                "average_annual_temperature": 16.5,
+                "annual_rainfall": 11872,
+                "rainy_days_per_year": 260,
+                "humidity": 98,
+                "notable_title": "Wettest Place on Earth"
+            },
+            "rainfall_data": {
+                "wettest_month": "July",
+                "driest_month": "December",
+                "max_daily_rainfall": 943
+            }
+        },
+        {
+            "name": "Death Valley, USA",
+            "country": "United States",
+            "latitude": 36.2104,
+            "longitude": -116.8233,
+            "climate_characteristics": {
+                "average_annual_temperature": 29.5,
+                "max_temperature": 56.7,
+                "annual_rainfall": 76.2,
+                "humidity": 20,
+                "notable_title": "Hottest Location in North America"
+            },
+            "temperature_data": {
+                "hottest_month": "July",
+                "coldest_month": "January",
+                "record_temperature": 56.7,
+                "days_over_100f_per_year": 154
+            }
+        },
+        {
+            "name": "Atacama Desert, Chile",
+            "country": "Chile",
+            "latitude": -22.4523,
+            "longitude": -68.9189,
+            "climate_characteristics": {
+                "average_annual_temperature": 18.5,
+                "annual_rainfall": 1.5,
+                "humidity": 15,
+                "consecutive_years_without_rain": 400,
+                "notable_title": "Driest Place on Earth"
+            },
+            "weather_peculiarities": {
+                "avg_cloud_cover_per_year": "Less than 1%",
+                "water_sources": "Primarily from mountain glaciers"
+            }
+        },
+        {
+            "name": "Cherrapunji, India",
+            "country": "India",
+            "latitude": 25.2703,
+            "longitude": 91.7383,
+            "climate_characteristics": {
+                "average_annual_temperature": 18.3,
+                "annual_rainfall": 11430,
+                "rainy_days_per_year": 250,
+                "humidity": 95,
+                "notable_title": "Second Wettest Place Globally"
+            },
+            "rainfall_data": {
+                "wettest_month": "June",
+                "monthly_rainfall_record": {
+                    "month": "July",
+                    "amount": 9296
+                }
+            }
+        }
+    ],
+    "dataset_metadata": {
+        "last_updated": "2024-12-11",
+        "data_sources": ["NOAA", "World Meteorological Organization"],
+        "disclaimer": "Data represents historical averages and extreme records"
+    }
+}

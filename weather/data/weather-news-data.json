@@ -1,0 +1,130 @@
+{
+    "news_articles": [
+        {
+            "id": 1,
+            "title": "Record-Breaking Heatwave Sweeps Across Southern Europe",
+            "category": "Climate",
+            "region": "Europe",
+            "date": "2024-07-15",
+            "summary": "Multiple countries experience temperatures exceeding 45°C, causing widespread health warnings and increased wildfire risks.",
+            "full_text": "Southern European countries are battling an unprecedented heatwave that has pushed temperatures to dangerous levels. Spain, Italy, and Greece have issued extreme heat alerts, with meteorologists warning of potential long-term climate change implications.",
+            "image": {
+                "url": "https://images.unsplash.com/photo-1660339285632-1987f14c9a80?q=80&w=1956&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "alt": "Heatwave in Southern Europe",
+                "caption": "Scorching temperatures impact Southern European cities"
+            },
+            "temperature_impact": {
+                "max_temp": 47.2,
+                "affected_cities": [
+                    "Seville",
+                    "Athens",
+                    "Rome"
+                ],
+                "heat_index": "Extreme"
+            }
+        },
+        {
+            "id": 2,
+            "title": "Tropical Storm Develops in Caribbean, Potential Hurricane Formation",
+            "category": "Tropical Weather",
+            "region": "Caribbean",
+            "date": "2024-08-03",
+            "summary": "Meteorological services track developing storm with potential to become a Category 2 hurricane in coming days.",
+            "full_text": "The National Hurricane Center is closely monitoring a tropical disturbance that has shown increasing organization and potential for rapid intensification.",
+            "image": {
+                "url": "https://images.unsplash.com/photo-1570589867577-095368ee1649?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "alt": "Tropical Storm in Caribbean",
+                "caption": "Satellite imagery of developing tropical storm"
+            },
+            "storm_details": {
+                "current_wind_speed": 65,
+                "current_location": {
+                    "latitude": 15.4,
+                    "longitude": -60.2
+                },
+                "potential_landfall_regions": [
+                    "Puerto Rico",
+                    "Dominican Republic"
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "title": "Unprecedented Rainfall Causes Massive Flooding in Southeast Asia",
+            "category": "Natural Disaster",
+            "region": "Southeast Asia",
+            "date": "2024-06-22",
+            "summary": "Monsoon season brings record-breaking precipitation, displacing thousands and causing significant infrastructure damage.",
+            "full_text": "Countries like Thailand and Vietnam are experiencing monsoon rains far beyond historical averages, leading to widespread flooding and humanitarian concerns.",
+            "image": {
+                "url": "https://images.unsplash.com/photo-1534862262637-373c120dcbcc?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "alt": "Flooding in Southeast Asia",
+                "caption": "Extensive flooding in urban and rural areas"
+            },
+            "rainfall_data": {
+                "total_rainfall": 750,
+                "units": "mm",
+                "affected_provinces": [
+                    "Chiang Mai",
+                    "Bangkok",
+                    "Ho Chi Minh City"
+                ],
+                "flood_severity": "Extreme"
+            }
+        },
+        {
+            "id": 4,
+            "title": "Climate Change Report Highlights Urgent Need for Action",
+            "category": "Climate Science",
+            "region": "Global",
+            "date": "2024-09-10",
+            "summary": "International panel releases comprehensive report detailing accelerating global temperature increases and environmental impacts.",
+            "full_text": "Scientists from 50 countries collaborate to provide the most comprehensive analysis of global climate trends, emphasizing immediate intervention requirements.",
+            "image": {
+                "url": "https://plus.unsplash.com/premium_photo-1664298311043-46b3814a511f?q=80&w=2083&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "alt": "Climate Change Conference",
+                "caption": "International scientists discussing global climate report"
+            },
+            "climate_metrics": {
+                "global_temperature_increase": 1.5,
+                "units": "°C",
+                "projected_increase_by_2050": 2.7,
+                "key_contributors": [
+                    "Industrial Emissions",
+                    "Deforestation"
+                ]
+            }
+        },
+        {
+            "id": 5,
+            "title": "New Satellite Technology Improves Extreme Weather Prediction",
+            "category": "Technology",
+            "region": "Global",
+            "date": "2024-05-18",
+            "summary": "Advanced meteorological satellite launched, promising more accurate and timely severe weather warnings.",
+            "full_text": "NASA and European Space Agency collaborate on next-generation weather monitoring satellite with unprecedented prediction capabilities.",
+            "image": {
+                "url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "alt": "Weather Monitoring Satellite",
+                "caption": "Advanced meteorological satellite ready for launch"
+            },
+            "technology_details": {
+                "satellite_name": "MeteoGuard-7",
+                "prediction_accuracy_improvement": "35%",
+                "key_monitoring_capabilities": [
+                    "Hurricane Tracking",
+                    "Wildfire Risk Assessment",
+                    "Precipitation Modeling"
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "last_updated": "2024-12-12",
+        "total_articles": 5,
+        "data_sources": [
+            "Global Weather Monitoring Network",
+            "International Climate Research Center"
+        ]
+    }
+}

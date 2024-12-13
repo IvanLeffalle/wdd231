@@ -940,7 +940,6 @@ form>label {
         margin: 8px 0;
     }
 
-    /* Grid and layout adjustments */
     .grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -968,7 +967,6 @@ form>label {
         display: flex;
         justify-content: center;
         width: 80%;
-        /* Reduce size to better fit the layout */
         margin: 0 auto;
     }
 

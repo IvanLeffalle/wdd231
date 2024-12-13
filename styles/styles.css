@@ -311,6 +311,18 @@ dialog ul {
 
 }
 
+.course-list a {
+    text-decoration: none;
+    color: var(--text-color-light);
+}
+
+.course-list li a :hover {
+    color: var(--accent-color);
+    transform: scale(1.1);
+
+
+}
+
 .course-title {
     font-weight: bold;
 }

@@ -723,6 +723,8 @@ dialog p {
     text-align: start;
 }
 
+
+
 .icons-label {
     display: flex;
     gap: 1rem;
@@ -855,6 +857,25 @@ form>label {
     transform: scale(1.1);
     transition: transform 0.3s ease-in-out;
 
+}
+
+.attributions-container {
+    display: flex;
+    grid-column: 4/10;
+    justify-content: space-between;
+    background-color: var(--text-color-light);
+    border-radius: 10px;
+}
+
+.attributions-container h1 {
+    color: var(--text-color-dark);
+}
+
+#attributions-icons p {
+    color: var(--text-color-dark);
+    font-size: 20px;
+    text-align: start;
+    margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 4rem) and (max-width: 1900px) {
